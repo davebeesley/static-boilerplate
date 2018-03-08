@@ -1,0 +1,17 @@
+/**
+ * GRID
+ */
+.grid {
+    @supports (display: grid) {
+        display: grid;
+    }
+
+    &--two {
+        @supports (display: grid) {
+            @include media-query("lap-and-up") {
+                grid-gap: 20px 60px;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/**
+ * CONTAINER
+ */
+.container {
+    $self: &;
+
+    margin: 0 auto;
+    max-width: calc(#{$site-max-width} + 60px);
+    padding: 0 30px;
+    width: 100%;
+}

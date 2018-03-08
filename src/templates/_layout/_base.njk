@@ -1,0 +1,24 @@
+{% include "_includes/_doctype.njk" %}
+
+{% include "_includes/_head.njk" %}
+
+<body>
+
+    {% include "_includes/_svg.njk" %}
+
+    {% include "_includes/_header.njk" %}
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include "_includes/_footer.njk" %}
+
+    {% include "_includes/_scripts.njk" %}
+    
+    {% block custom_scripts %}
+    {% endblock %}
+    
+</body>
+</html>

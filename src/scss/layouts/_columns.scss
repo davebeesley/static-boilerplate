@@ -1,0 +1,29 @@
+/**
+ * COLUMNS
+ */
+.columns {
+    $self: &;
+
+    &--two {
+        @include media-query("lap-and-up") {
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        @include media-query("desk") {
+            column-gap: 60px;
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

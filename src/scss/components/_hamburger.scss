@@ -1,0 +1,56 @@
+/**
+ * HAMBURGER
+ */
+.hamburger {
+    background: $white;
+    border-radius: 1px;
+    height: 4px;
+    outline: none;
+    position: relative;
+    top: -4px;
+    transition: all 0.2s ease-in;
+    width: 100%;
+
+    &:focus {
+        border: 0;
+    }
+
+    &:before,
+    &:after {
+        background: $white;
+        border-radius: 1px;
+        content: "";
+        height: 4px;
+        left: 0;
+        position: absolute;
+        transition: all 0.2s ease-in;
+        width: 100%;
+    }
+
+    &:before {
+        top: -8px;
+    }
+
+    &:after {
+        top: 8px;
+    }
+
+    &.open {
+        background: transparent;
+        transition: all 0.2s ease-out;
+
+        &:before,
+        &:after {
+            left: 2px;
+            transition: all 0.2s ease-out;
+        }
+
+        &:before {
+            transform: rotate(45deg) translateX(3.5px) translateY(8px);
+        }
+
+        &:after {
+            transform: rotate(-45deg) translateX(3.5px) translateY(-8px);
+        }
+    }
+}
